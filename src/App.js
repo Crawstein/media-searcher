@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=e1fe49cc'
+const API_URL = 'https://www.omdbapi.com?apikey=e1fe49cc'
 
 function App() {
     const [movies, setMovies] = useState()
