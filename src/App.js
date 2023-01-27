@@ -1,14 +1,11 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SearchIcon from './search.svg'
 import MovieCard from './MovieCard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-
-
-// e1fe49cc
 
 const API_URL = 'http://www.omdbapi.com?apikey=e1fe49cc'
 
@@ -27,7 +24,7 @@ function App() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                });
+            });
             return
         }
         const response = await fetch(`${API_URL}&s=${title}`)
@@ -47,9 +44,9 @@ function App() {
             </div>
 
 
-            
 
-            {   
+
+            {
                 movies?.length > 0
                     ? (
                         <div className="container">
@@ -59,7 +56,7 @@ function App() {
                         </div>
                     ) : (
 
-                        !isNewVisit && 
+                        !isNewVisit &&
                         <div className='empty'>
                             <h2>No movies found</h2>
                         </div>
