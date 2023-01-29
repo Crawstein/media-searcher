@@ -2,7 +2,7 @@ import React from "react";
 
 const MovieCard = ({ movie }) => {
     return (
-        <a href={`https://google.com/search?q=${movie.Title}`} target="blank" className="movie">
+        <a href={`https://google.com/search?q=${movie.Title}, ${movie.Type}`} target="blank" className="movie">
             <div>
                 <p>{movie.Year.trim().endsWith('–') ? `${movie.Year}Present` : movie.Year}</p>
             </div>
